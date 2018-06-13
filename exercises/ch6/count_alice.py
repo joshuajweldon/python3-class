@@ -8,7 +8,7 @@ except IOError:
     exit(1)
 
 for line in file:
-    if line.find('Alice') != -1:
+    if 'Alice' in line:
         count += 1
 
 file.close()

@@ -11,7 +11,7 @@ def count_words(word, file_name):
         exit(1)
 
     for line in file:
-        if line.find(word) != -1:
+        if word in line:
             count += 1
 
     file.close()
