@@ -1,8 +1,9 @@
-limit = 100
+my_limit = 100000000
 
-def primeGen(limit):
+
+def prime_gen(limit):
     table = [True] * limit
-    for i in range(2,limit):
+    for i in range(2, limit):
         if table[i]:
             j = 2
             while True:
@@ -14,8 +15,7 @@ def primeGen(limit):
                     table[non_prime] = False
             yield i
 
-primes = primeGen(limit)
+
+primes = prime_gen(my_limit)
 for prime in primes:
     print(prime)
-
-
