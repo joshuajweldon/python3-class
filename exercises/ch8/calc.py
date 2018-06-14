@@ -25,13 +25,16 @@ operators = {
     '/': divide
 }
 
-input("Calculator Application: \nYou may enter an expression of the form x [+-*/]+ y.\nPress ENTER to start.")
+input("Calculator Application: \nYou may enter an expression of the form x [+-*/]+ y.\nYou my enter 'q' to quit. \nPress ENTER to start.")
 
 while True:
     expression = input(">>> ")
 
     if not expression:
         continue
+
+    if expression == 'q':
+        break
 
     try:
         curr_x, op, curr_y = expression.split()
